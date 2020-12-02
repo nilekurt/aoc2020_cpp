@@ -29,14 +29,11 @@ solve(uint32_t          target,
             return {};
         }
 
-        if (a == target) {
-            // No search is needed for the symmetric case - succeed early
-            return {a, a};
-        }
-
         auto const b = target - a;
-        if (std::binary_search(std::begin(values), std::end(values), b)) {
-            // Success
+
+        // Short-circuit in the symmetric case
+        if (a == b ||
+            std::binary_search(std::begin(values), std::end(values), b)) {
             return {b, a};
         }
     }
