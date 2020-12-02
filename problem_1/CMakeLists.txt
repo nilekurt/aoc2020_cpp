@@ -15,4 +15,3 @@ target_link_libraries(aoc2020_problem_1
 
 configure_lto(aoc2020_problem_1)
 configure_tidy(aoc2020_problem_1)
-

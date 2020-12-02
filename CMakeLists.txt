@@ -46,3 +46,4 @@ target_compile_options(aoc2020_copts_common INTERFACE
 add_subdirectory(3rdparty)
 add_subdirectory(common)
 add_subdirectory(problem_1)
+add_subdirectory(problem_2)
