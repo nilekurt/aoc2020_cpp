@@ -1,0 +1,6 @@
+function(configure_lto TARGET_NAME)
+    if (ADVENT_OF_CODE_2020_LTO)
+        cmake_policy(SET CMP0069 NEW)
+        set_property(TARGET ${TARGET_NAME} PROPERTY INTERPROCEDURAL_OPTIMIZATION TRUE)
+    endif()
+endfunction()
